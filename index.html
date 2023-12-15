@@ -42,7 +42,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link fw-medium active" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link fw-medium active" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-medium" href="#about">About</a>
@@ -60,7 +60,7 @@
                         <a class="nav-link fw-medium" href="#contact">Contact</a>
                     </li>
                 </ul>
-                <div class="btn-content text-light px-4 py-2 rounded">Get Started</div>
+                <div class="btn-content text-light px-4 mx-2 py-2 rounded">Get Started</div>
             </div>
         </div>
     </nav>
@@ -449,7 +449,7 @@
     <!-- akhir contact -->
 
 
-
+    <!-- footer -->
     <footer 
         class="footer p-5"
         style="margin-top: 100px;"
@@ -533,6 +533,7 @@
             &copy; Plantsasri 2023
         </p>
     </footer>
+    <!-- akhir footer -->
 
 
 
@@ -578,12 +579,14 @@
             autoplay: true,
             autoplaySpeed: 2000,
             arrows: false,
-            responsive: [{
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 2,
+            responsive: [
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 2,
+                    }
                 }
-            }]
+            ]
         });
 
 
@@ -594,6 +597,20 @@
             autoplaySpeed: 2000,
             arrows: false,
             Infinity: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    },
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                    },
+                },
+            ]
         });
     </script>
 </body>

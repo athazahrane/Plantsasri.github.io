@@ -1,22 +1,61 @@
 // navbar color tab
 document.addEventListener("DOMContentLoaded", function () {
-  // Ambil semua tautan di navbar
   var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  var sections = document.querySelectorAll("section");
 
-  // Fungsi untuk menghapus kelas "text-success" dan "text-muted" dari semua tautan
   function removeTextClasses() {
     navLinks.forEach(function (link) {
-      link.classList.remove("text-success", "text-muted");
+      link.classList.remove("text-success", "text-muted", "active");
     });
   }
 
-  // Tambahkan event listener untuk setiap tautan
-  navLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
+  function highlightNavLink(link) {
+    removeTextClasses();
+    link.classList.add("text-success", "active");
+  }
+
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+  }
+
+  function setActiveNavLink() {
+    var activeLinkFound = false; // Flag untuk menandakan apakah link yang sesuai ditemukan
+
+    sections.forEach(function (section) {
+      var link = document.querySelector(`.navbar-nav .nav-link[href="#${section.id}"]`);
+      if (link && isElementInViewport(section)) {
+        highlightNavLink(link);
+        activeLinkFound = true; // Set flag menjadi true ketika link ditemukan
+      }
+    });
+
+    // Matikan link jika tidak ada link yang sesuai dengan ID
+    if (!activeLinkFound) {
       removeTextClasses();
-      link.classList.add("text-success");
+    }
+  }
+
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      var targetId = link.getAttribute("href").substring(1);
+      var targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 50,
+          behavior: "smooth"
+        });
+      }
     });
   });
+
+  window.addEventListener("scroll", function () {
+    setActiveNavLink();
+  });
+
+  setActiveNavLink();
 });
 // end  
 
