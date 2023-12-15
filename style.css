@@ -1,0 +1,488 @@
+:root {
+    --color-primary: rgb(45, 184, 120);
+    --brown-color: rgb(55, 61, 58);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden
+}
+
+/* navbar */
+.btn-content {
+    background-color: var(--color-primary);
+    color: #fff;
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--color-primary);
+    transition: .3s ease;
+}
+
+a.nav-link {
+    color: #544e4e;
+}
+
+a.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+    width: 50%;
+}
+
+/* end */
+
+
+
+/* hero */
+section.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./image/img2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* end */
+
+
+/* about */
+.title-content {
+    color: var(--brown-color);
+}
+
+.title-content::before {
+    content: " ";
+    display: inline-block;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 50px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--brown-color);
+}
+
+.content-about {
+    padding: 0 30px;
+}
+
+.image-content {
+    width: 100%;
+}
+
+.image-content img {
+    max-width: 700px;
+}
+
+.content-about {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 2s;
+}
+
+.content-about.muncul {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* end */
+
+
+/* service */
+
+/* card 1 */
+.card-item {
+    position: relative;
+    width: 280px;
+    height: 390px;
+    background: linear-gradient(145deg, #fcfafa, #efeaea);
+    box-shadow: 17px 17px 32px #d1cece,
+        -17px -17px 32px #f5e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-item::before,
+.card-item::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    transition: all 0.5s;
+}
+
+.card-item::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card-item::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card-item:hover::before,
+.card-item:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card-item:hover:after {
+    content: "Many countries you can go to send your plants";
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* card 2 */
+.card-item-dua {
+    position: relative;
+    width: 280px;
+    height: 390px;
+    background: linear-gradient(145deg, #fcfafa, #efeaea);
+    box-shadow: 17px 17px 32px #d1cece,
+        -17px -17px 32px #f5e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-item-dua::before,
+.card-item-dua::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    transition: all 0.5s;
+}
+
+.card-item-dua::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card-item-dua::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card-item-dua:hover::before,
+.card-item-dua:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card-item-dua:hover:after {
+    content: "You can take care of the documents you need for licensing quickly and easily";
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* card 3 */
+.card-item-tiga {
+    position: relative;
+    width: 280px;
+    height: 390px;
+    background: linear-gradient(145deg, #fcfafa, #efeaea);
+    box-shadow: 17px 17px 32px #d1cece,
+        -17px -17px 32px #f5e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card-item-tiga::before,
+.card-item-tiga::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    transition: all 0.5s;
+}
+
+.card-item-tiga::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card-item-tiga::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card-item-tiga:hover::before,
+.card-item-tiga:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card-item-tiga:hover:after {
+    content: "You will get friendly & super service only at Plantsasri";
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.item {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 2s;
+}
+
+.item.muncul {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* end */
+
+
+
+/* banner */
+.content-banner {
+    width: 100%;
+    min-height: 350px;
+    padding: 30px;
+    background: linear-gradient(149deg, #108BBC 0%, #07d7aa 100%);
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 2s;
+}
+.content-banner.muncul {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.phone-banner {
+    margin-top: -180px;
+}
+
+.text-banner {
+    margin-left: -100px;
+}
+/* end */
+
+
+/* countries */
+.countries {
+    position: relative;
+}
+
+.bg-countries {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    z-index: -1;
+}
+
+.item-satu {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 2s;
+}
+
+.item-satu.muncul {
+    opacity: 1;
+    transform: translateX(0px);
+}
+.item-dua {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 2s;
+}
+
+.item-dua.muncul {
+    opacity: 1;
+    transform: translateX(0px);
+}
+/* end */
+
+
+
+
+/* testimoni */
+.pp-testimoni {
+    width: 60px;
+}
+.testimoni-parallax {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 2s;
+}
+
+.testimoni-parallax.muncul {
+    opacity: 1;
+    transform: translateY(0px);
+}
+/* end */
+
+
+
+/* partnership */
+.item-kotak {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.item-parallax {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: .3s ease;
+}
+
+.item-parallax.muncul {
+    opacity: 1;
+    transform: translateY(0px);
+}
+/* end */
+
+
+/* contact */
+section.contact textarea.form-control {
+    height: 200px;
+}
+iframe {
+    height: 90%;
+    width: 100%;
+    margin-top: 50px;
+}
+/* end */
+
+
+
+/* footer */
+footer {
+    background-color: #333;
+}
+
+.facebook, .instagram {
+    background-color: var(--color-primary);
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+.links-item::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: .3s ease;
+}
+
+.links-item:hover::after {
+    width: 15%;
+}
+.line {
+    width: 100%;
+    height: 4px;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+
+
+/* breakpoints */
+@media (max-width: 992px) {
+    html {
+        font-size: 85%;
+    }
+    .phone-banner {
+        display: none;
+    }
+    .text-banner {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 83%;
+    }
+
+    .image-content img {
+        width: 100%;
+    }
+    footer {
+        text-align: center;
+    }
+    .social-medias {
+        display: flex;
+        justify-content: center;
+    }
+}
